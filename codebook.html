@@ -1,0 +1,2739 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Carolyn Whitehead" />
+
+
+<title>Codebook for tidyData.txt</title>
+
+<script src="CODEBOOK_files/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="CODEBOOK_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="CODEBOOK_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="CODEBOOK_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="CODEBOOK_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="CODEBOOK_files/navigation-1.1/tabsets.js"></script>
+<link href="CODEBOOK_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="CODEBOOK_files/highlightjs-9.12.0/highlight.js"></script>
+<script src="CODEBOOK_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="CODEBOOK_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="CODEBOOK_files/datatables-binding-0.16/datatables.js"></script>
+<link href="CODEBOOK_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="CODEBOOK_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="CODEBOOK_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="CODEBOOK_files/jszip-1.10.20/jszip.min.js"></script>
+<script src="CODEBOOK_files/pdfmake-1.10.20/pdfmake.js"></script>
+<script src="CODEBOOK_files/pdfmake-1.10.20/vfs_fonts.js"></script>
+<link href="CODEBOOK_files/dt-ext-buttons-1.10.20/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="CODEBOOK_files/dt-ext-buttons-1.10.20/js/dataTables.buttons.min.js"></script>
+<script src="CODEBOOK_files/dt-ext-buttons-1.10.20/js/buttons.flash.min.js"></script>
+<script src="CODEBOOK_files/dt-ext-buttons-1.10.20/js/buttons.html5.min.js"></script>
+<script src="CODEBOOK_files/dt-ext-buttons-1.10.20/js/buttons.colVis.min.js"></script>
+<script src="CODEBOOK_files/dt-ext-buttons-1.10.20/js/buttons.print.min.js"></script>
+<link href="CODEBOOK_files/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="CODEBOOK_files/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="CODEBOOK_files/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="CODEBOOK_files/selectize-0.12.0/selectize.min.js"></script>
+<link href="CODEBOOK_files/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="CODEBOOK_files/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Codebook for tidyData.txt</h1>
+<h4 class="author">Carolyn Whitehead</h4>
+<h4 class="date">5/16/2021</h4>
+
+</div>
+
+
+<div id="github-documents" class="section level2">
+<h2>GitHub Documents</h2>
+<p>This is an R Markdown format used for publishing markdown documents to GitHub. When you click the <strong>Knit</strong> button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.</p>
+</div>
+<div id="including-code" class="section level2">
+<h2>Including Code</h2>
+<p>You can include R code in the document as follows:</p>
+<p>Create codebook</p>
+<pre class="r"><code>codebook(codebook_data)</code></pre>
+<pre><code>## No missing values.</code></pre>
+<div id="metadata" class="section level3">
+<h3>Metadata</h3>
+<div id="description" class="section level4">
+<h4>Description</h4>
+<p><strong>Dataset name</strong>: codebook_data</p>
+<p>The dataset has N=180 rows and 35 columns. 180 rows have no missing values on any column.</p>
+<details>
+<p><summary title="Expand this section to see some additional metadata in a structured format that is useful for search engines">Metadata for search engines</summary></p>
+<ul>
+<li><strong>Date published</strong>: 2021-05-18</li>
+</ul>
+<table class="kable_wrapper">
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">subject</td>
+</tr>
+<tr class="even">
+<td align="left">activity</td>
+</tr>
+<tr class="odd">
+<td align="left">timeBodyAccelerometer.mean…X</td>
+</tr>
+<tr class="even">
+<td align="left">timeBodyAccelerometer.mean…Y</td>
+</tr>
+<tr class="odd">
+<td align="left">timeBodyAccelerometer.mean…Z</td>
+</tr>
+<tr class="even">
+<td align="left">timeGravityAccelerometer.mean…X</td>
+</tr>
+<tr class="odd">
+<td align="left">timeGravityAccelerometer.mean…Y</td>
+</tr>
+<tr class="even">
+<td align="left">timeGravityAccelerometer.mean…Z</td>
+</tr>
+<tr class="odd">
+<td align="left">timeBodyAccelerometerJerk.mean…X</td>
+</tr>
+<tr class="even">
+<td align="left">timeBodyAccelerometerJerk.mean…Y</td>
+</tr>
+<tr class="odd">
+<td align="left">timeBodyAccelerometerJerk.mean…Z</td>
+</tr>
+<tr class="even">
+<td align="left">timeBodyGyroscope.mean…X</td>
+</tr>
+<tr class="odd">
+<td align="left">timeBodyGyroscope.mean…Y</td>
+</tr>
+<tr class="even">
+<td align="left">timeBodyGyroscope.mean…Z</td>
+</tr>
+<tr class="odd">
+<td align="left">timeBodyGyroscopeJerk.mean…X</td>
+</tr>
+<tr class="even">
+<td align="left">timeBodyGyroscopeJerk.mean…Y</td>
+</tr>
+<tr class="odd">
+<td align="left">timeBodyGyroscopeJerk.mean…Z</td>
+</tr>
+<tr class="even">
+<td align="left">timeBodyAccelerometerMagnitude.mean..</td>
+</tr>
+<tr class="odd">
+<td align="left">timeGravityAccelerometerMagnitude.mean..</td>
+</tr>
+<tr class="even">
+<td align="left">timeBodyAccelerometerJerkMagnitude.mean..</td>
+</tr>
+<tr class="odd">
+<td align="left">timeBodyGyroscopeMagnitude.mean..</td>
+</tr>
+<tr class="even">
+<td align="left">timeBodyGyroscopeJerkMagnitude.mean..</td>
+</tr>
+<tr class="odd">
+<td align="left">frequencyBodyAccelerometer.mean…X</td>
+</tr>
+<tr class="even">
+<td align="left">frequencyBodyAccelerometer.mean…Y</td>
+</tr>
+<tr class="odd">
+<td align="left">frequencyBodyAccelerometer.mean…Z</td>
+</tr>
+<tr class="even">
+<td align="left">frequencyBodyAccelerometerJerk.mean…X</td>
+</tr>
+<tr class="odd">
+<td align="left">frequencyBodyAccelerometerJerk.mean…Y</td>
+</tr>
+<tr class="even">
+<td align="left">frequencyBodyAccelerometerJerk.mean…Z</td>
+</tr>
+<tr class="odd">
+<td align="left">frequencyBodyGyroscope.mean…X</td>
+</tr>
+<tr class="even">
+<td align="left">frequencyBodyGyroscope.mean…Y</td>
+</tr>
+<tr class="odd">
+<td align="left">frequencyBodyGyroscope.mean…Z</td>
+</tr>
+<tr class="even">
+<td align="left">frequencyBodyAccelerometerMagnitude.mean..</td>
+</tr>
+<tr class="odd">
+<td align="left">frequencyBodyAccelerometerJerkMagnitude.mean..</td>
+</tr>
+<tr class="even">
+<td align="left">frequencyBodyGyroscopeMagnitude.mean..</td>
+</tr>
+<tr class="odd">
+<td align="left">frequencyBodyGyroscopeJerkMagnitude.mean..</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>#Variables</p>
+</div>
+</div>
+<div id="subject" class="section level3 tabset">
+<h3>subject</h3>
+<div id="subject_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_subject_distribution-1.png" alt="" />
+<p class="caption">Distribution of values for subject</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="subject_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">subject</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">1</td>
+<td align="left">16</td>
+<td align="left">30</td>
+<td align="right">15.5</td>
+<td align="right">8.679585</td>
+<td align="left">▇▇▇▇▇</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="activity" class="section level3 tabset">
+<h3>activity</h3>
+<div id="activity_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_activity_distribution-15-1.png" alt="" />
+<p class="caption">Distribution of values for activity</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="activity_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">n_unique</th>
+<th align="right">empty</th>
+<th align="left">min</th>
+<th align="left">max</th>
+<th align="right">whitespace</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">activity</td>
+<td align="left">character</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="left">6</td>
+<td align="left">18</td>
+<td align="right">0</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyAccelerometer_mean___X" class="section level3 tabset">
+<h3>timeBodyAccelerometer.mean…X</h3>
+<div id="timeBodyAccelerometer_mean___X_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyAccelerometer_mean___X_distribution-22-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyAccelerometer.mean…X</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyAccelerometer_mean___X_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="27%" />
+<col width="8%" />
+<col width="8%" />
+<col width="12%" />
+<col width="4%" />
+<col width="6%" />
+<col width="3%" />
+<col width="8%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyAccelerometer.mean…X</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">0.22</td>
+<td align="left">0.28</td>
+<td align="left">0.3</td>
+<td align="right">0.2743027</td>
+<td align="right">0.0121646</td>
+<td align="left">▁▁▂▇▂</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyAccelerometer_mean___Y" class="section level3 tabset">
+<h3>timeBodyAccelerometer.mean…Y</h3>
+<div id="timeBodyAccelerometer_mean___Y_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyAccelerometer_mean___Y_distribution-29-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyAccelerometer.mean…Y</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyAccelerometer_mean___Y_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="6%" />
+<col width="9%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyAccelerometer.mean…Y</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.041</td>
+<td align="left">-0.017</td>
+<td align="left">-0.0013</td>
+<td align="right">-0.0178755</td>
+<td align="right">0.0057712</td>
+<td align="left">▁▂▇▇▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyAccelerometer_mean___Z" class="section level3 tabset">
+<h3>timeBodyAccelerometer.mean…Z</h3>
+<div id="timeBodyAccelerometer_mean___Z_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyAccelerometer_mean___Z_distribution-36-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyAccelerometer.mean…Z</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyAccelerometer_mean___Z_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="26%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="9%" />
+<col width="7%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyAccelerometer.mean…Z</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.15</td>
+<td align="left">-0.11</td>
+<td align="left">-0.075</td>
+<td align="right">-0.1091638</td>
+<td align="right">0.009582</td>
+<td align="left">▁▁▇▅▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeGravityAccelerometer_mean___X" class="section level3 tabset">
+<h3>timeGravityAccelerometer.mean…X</h3>
+<div id="timeGravityAccelerometer_mean___X_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeGravityAccelerometer_mean___X_distribution-43-1.png" alt="" />
+<p class="caption">Distribution of values for timeGravityAccelerometer.mean…X</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeGravityAccelerometer_mean___X_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="28%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="4%" />
+<col width="8%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeGravityAccelerometer.mean…X</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.68</td>
+<td align="left">0.92</td>
+<td align="left">0.97</td>
+<td align="right">0.6974775</td>
+<td align="right">0.4872534</td>
+<td align="left">▁▁▁▁▇</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeGravityAccelerometer_mean___Y" class="section level3 tabset">
+<h3>timeGravityAccelerometer.mean…Y</h3>
+<div id="timeGravityAccelerometer_mean___Y_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeGravityAccelerometer_mean___Y_distribution-50-1.png" alt="" />
+<p class="caption">Distribution of values for timeGravityAccelerometer.mean…Y</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeGravityAccelerometer_mean___Y_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="28%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="4%" />
+<col width="9%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeGravityAccelerometer.mean…Y</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.48</td>
+<td align="left">-0.13</td>
+<td align="left">0.96</td>
+<td align="right">-0.0162128</td>
+<td align="right">0.3452376</td>
+<td align="left">▇▇▂▁▂</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeGravityAccelerometer_mean___Z" class="section level3 tabset">
+<h3>timeGravityAccelerometer.mean…Z</h3>
+<div id="timeGravityAccelerometer_mean___Z_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeGravityAccelerometer_mean___Z_distribution-57-1.png" alt="" />
+<p class="caption">Distribution of values for timeGravityAccelerometer.mean…Z</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeGravityAccelerometer_mean___Z_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="29%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="4%" />
+<col width="5%" />
+<col width="4%" />
+<col width="8%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeGravityAccelerometer.mean…Z</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.5</td>
+<td align="left">0.024</td>
+<td align="left">0.96</td>
+<td align="right">0.0741279</td>
+<td align="right">0.2887919</td>
+<td align="left">▂▇▃▁▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyAccelerometerJerk_mean___X" class="section level3 tabset">
+<h3>timeBodyAccelerometerJerk.mean…X</h3>
+<div id="timeBodyAccelerometerJerk_mean___X_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyAccelerometerJerk_mean___X_distribution-64-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyAccelerometerJerk.mean…X</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyAccelerometerJerk_mean___X_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="29%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="4%" />
+<col width="8%" />
+<col width="7%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyAccelerometerJerk.mean…X</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">0.043</td>
+<td align="left">0.076</td>
+<td align="left">0.13</td>
+<td align="right">0.0794736</td>
+<td align="right">0.012588</td>
+<td align="left">▁▇▃▂▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyAccelerometerJerk_mean___Y" class="section level3 tabset">
+<h3>timeBodyAccelerometerJerk.mean…Y</h3>
+<div id="timeBodyAccelerometerJerk_mean___Y_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyAccelerometerJerk_mean___Y_distribution-71-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyAccelerometerJerk.mean…Y</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyAccelerometerJerk_mean___Y_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="28%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="4%" />
+<col width="8%" />
+<col width="8%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyAccelerometerJerk.mean…Y</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.039</td>
+<td align="left">0.0095</td>
+<td align="left">0.057</td>
+<td align="right">0.0075652</td>
+<td align="right">0.0135764</td>
+<td align="left">▁▃▇▂▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyAccelerometerJerk_mean___Z" class="section level3 tabset">
+<h3>timeBodyAccelerometerJerk.mean…Z</h3>
+<div id="timeBodyAccelerometerJerk_mean___Z_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyAccelerometerJerk_mean___Z_distribution-78-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyAccelerometerJerk.mean…Z</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyAccelerometerJerk_mean___Z_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="28%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="6%" />
+<col width="4%" />
+<col width="8%" />
+<col width="8%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyAccelerometerJerk.mean…Z</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.067</td>
+<td align="left">-0.0039</td>
+<td align="left">0.038</td>
+<td align="right">-0.0049534</td>
+<td align="right">0.0134621</td>
+<td align="left">▁▁▇▇▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyGyroscope_mean___X" class="section level3 tabset">
+<h3>timeBodyGyroscope.mean…X</h3>
+<div id="timeBodyGyroscope_mean___X_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyGyroscope_mean___X_distribution-85-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyGyroscope.mean…X</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyGyroscope_mean___X_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="24%" />
+<col width="8%" />
+<col width="8%" />
+<col width="12%" />
+<col width="5%" />
+<col width="6%" />
+<col width="4%" />
+<col width="9%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyGyroscope.mean…X</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.21</td>
+<td align="left">-0.029</td>
+<td align="left">0.19</td>
+<td align="right">-0.0324372</td>
+<td align="right">0.0540518</td>
+<td align="left">▁▂▇▁▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyGyroscope_mean___Y" class="section level3 tabset">
+<h3>timeBodyGyroscope.mean…Y</h3>
+<div id="timeBodyGyroscope_mean___Y_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyGyroscope_mean___Y_distribution-92-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyGyroscope.mean…Y</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyGyroscope_mean___Y_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="24%" />
+<col width="8%" />
+<col width="8%" />
+<col width="12%" />
+<col width="4%" />
+<col width="6%" />
+<col width="5%" />
+<col width="9%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyGyroscope.mean…Y</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.2</td>
+<td align="left">-0.073</td>
+<td align="left">0.027</td>
+<td align="right">-0.0742596</td>
+<td align="right">0.0355415</td>
+<td align="left">▁▁▇▃▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyGyroscope_mean___Z" class="section level3 tabset">
+<h3>timeBodyGyroscope.mean…Z</h3>
+<div id="timeBodyGyroscope_mean___Z_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyGyroscope_mean___Z_distribution-99-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyGyroscope.mean…Z</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyGyroscope_mean___Z_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="24%" />
+<col width="8%" />
+<col width="8%" />
+<col width="12%" />
+<col width="6%" />
+<col width="6%" />
+<col width="4%" />
+<col width="8%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyGyroscope.mean…Z</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.072</td>
+<td align="left">0.085</td>
+<td align="left">0.18</td>
+<td align="right">0.0874446</td>
+<td align="right">0.0362125</td>
+<td align="left">▁▁▃▇▂</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyGyroscopeJerk_mean___X" class="section level3 tabset">
+<h3>timeBodyGyroscopeJerk.mean…X</h3>
+<div id="timeBodyGyroscopeJerk_mean___X_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyGyroscopeJerk_mean___X_distribution-106-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyGyroscopeJerk.mean…X</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyGyroscopeJerk_mean___X_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="26%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="9%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyGyroscopeJerk.mean…X</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.16</td>
+<td align="left">-0.099</td>
+<td align="left">-0.022</td>
+<td align="right">-0.0960568</td>
+<td align="right">0.0233458</td>
+<td align="left">▁▂▇▁▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyGyroscopeJerk_mean___Y" class="section level3 tabset">
+<h3>timeBodyGyroscopeJerk.mean…Y</h3>
+<div id="timeBodyGyroscopeJerk_mean___Y_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyGyroscopeJerk_mean___Y_distribution-113-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyGyroscopeJerk.mean…Y</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyGyroscopeJerk_mean___Y_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="26%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="9%" />
+<col width="7%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyGyroscopeJerk.mean…Y</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.077</td>
+<td align="left">-0.041</td>
+<td align="left">-0.013</td>
+<td align="right">-0.0426928</td>
+<td align="right">0.009532</td>
+<td align="left">▁▂▇▃▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyGyroscopeJerk_mean___Z" class="section level3 tabset">
+<h3>timeBodyGyroscopeJerk.mean…Z</h3>
+<div id="timeBodyGyroscopeJerk_mean___Z_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyGyroscopeJerk_mean___Z_distribution-120-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyGyroscopeJerk.mean…Z</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyGyroscopeJerk_mean___Z_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="26%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="6%" />
+<col width="9%" />
+<col width="7%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyGyroscopeJerk.mean…Z</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.092</td>
+<td align="left">-0.053</td>
+<td align="left">-0.0069</td>
+<td align="right">-0.0548019</td>
+<td align="right">0.012347</td>
+<td align="left">▁▅▇▁▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyAccelerometerMagnitude_mean__" class="section level3 tabset">
+<h3>timeBodyAccelerometerMagnitude.mean..</h3>
+<div id="timeBodyAccelerometerMagnitude_mean___distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyAccelerometerMagnitude_mean___distribution-127-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyAccelerometerMagnitude.mean..</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyAccelerometerMagnitude_mean___summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="30%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="4%" />
+<col width="5%" />
+<col width="4%" />
+<col width="8%" />
+<col width="8%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyAccelerometerMagnitude.mean..</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.48</td>
+<td align="left">0.64</td>
+<td align="right">-0.4972897</td>
+<td align="right">0.4728834</td>
+<td align="left">▇▁▅▃▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeGravityAccelerometerMagnitude_mean__" class="section level3 tabset">
+<h3>timeGravityAccelerometerMagnitude.mean..</h3>
+<div id="timeGravityAccelerometerMagnitude_mean___distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeGravityAccelerometerMagnitude_mean___distribution-134-1.png" alt="" />
+<p class="caption">Distribution of values for timeGravityAccelerometerMagnitude.mean..</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeGravityAccelerometerMagnitude_mean___summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="32%" />
+<col width="7%" />
+<col width="7%" />
+<col width="11%" />
+<col width="4%" />
+<col width="5%" />
+<col width="3%" />
+<col width="8%" />
+<col width="7%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeGravityAccelerometerMagnitude.mean..</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.48</td>
+<td align="left">0.64</td>
+<td align="right">-0.4972897</td>
+<td align="right">0.4728834</td>
+<td align="left">▇▁▅▃▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyAccelerometerJerkMagnitude_mean__" class="section level3 tabset">
+<h3>timeBodyAccelerometerJerkMagnitude.mean..</h3>
+<div id="timeBodyAccelerometerJerkMagnitude_mean___distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyAccelerometerJerkMagnitude_mean___distribution-141-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyAccelerometerJerkMagnitude.mean..</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyAccelerometerJerkMagnitude_mean___summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="7%" />
+<col width="7%" />
+<col width="11%" />
+<col width="4%" />
+<col width="5%" />
+<col width="3%" />
+<col width="8%" />
+<col width="7%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyAccelerometerJerkMagnitude.mean..</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.82</td>
+<td align="left">0.43</td>
+<td align="right">-0.6079296</td>
+<td align="right">0.3965272</td>
+<td align="left">▇▂▅▂▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyGyroscopeMagnitude_mean__" class="section level3 tabset">
+<h3>timeBodyGyroscopeMagnitude.mean..</h3>
+<div id="timeBodyGyroscopeMagnitude_mean___distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyGyroscopeMagnitude_mean___distribution-148-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyGyroscopeMagnitude.mean..</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyGyroscopeMagnitude_mean___summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="28%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="4%" />
+<col width="9%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyGyroscopeMagnitude.mean..</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.98</td>
+<td align="left">-0.66</td>
+<td align="left">0.42</td>
+<td align="right">-0.5651631</td>
+<td align="right">0.3977338</td>
+<td align="left">▇▁▅▂▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="timeBodyGyroscopeJerkMagnitude_mean__" class="section level3 tabset">
+<h3>timeBodyGyroscopeJerkMagnitude.mean..</h3>
+<div id="timeBodyGyroscopeJerkMagnitude_mean___distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_timeBodyGyroscopeJerkMagnitude_mean___distribution-155-1.png" alt="" />
+<p class="caption">Distribution of values for timeBodyGyroscopeJerkMagnitude.mean..</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="timeBodyGyroscopeJerkMagnitude_mean___summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="31%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="3%" />
+<col width="5%" />
+<col width="4%" />
+<col width="9%" />
+<col width="8%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">timeBodyGyroscopeJerkMagnitude.mean..</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-1</td>
+<td align="left">-0.86</td>
+<td align="left">0.088</td>
+<td align="right">-0.7363693</td>
+<td align="right">0.2767541</td>
+<td align="left">▇▃▃▁▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyAccelerometer_mean___X" class="section level3 tabset">
+<h3>frequencyBodyAccelerometer.mean…X</h3>
+<div id="frequencyBodyAccelerometer_mean___X_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyAccelerometer_mean___X_distribution-162-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyAccelerometer.mean…X</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyAccelerometer_mean___X_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="31%" />
+<col width="8%" />
+<col width="8%" />
+<col width="12%" />
+<col width="3%" />
+<col width="6%" />
+<col width="4%" />
+<col width="6%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyAccelerometer.mean…X</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-1</td>
+<td align="left">-0.77</td>
+<td align="left">0.54</td>
+<td align="right">-0.5758</td>
+<td align="right">0.4300214</td>
+<td align="left">▇▁▃▂▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyAccelerometer_mean___Y" class="section level3 tabset">
+<h3>frequencyBodyAccelerometer.mean…Y</h3>
+<div id="frequencyBodyAccelerometer_mean___Y_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyAccelerometer_mean___Y_distribution-169-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyAccelerometer.mean…Y</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyAccelerometer_mean___Y_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="29%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="4%" />
+<col width="5%" />
+<col width="4%" />
+<col width="9%" />
+<col width="8%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyAccelerometer.mean…Y</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.59</td>
+<td align="left">0.52</td>
+<td align="right">-0.4887327</td>
+<td align="right">0.4806496</td>
+<td align="left">▇▁▃▃▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyAccelerometer_mean___Z" class="section level3 tabset">
+<h3>frequencyBodyAccelerometer.mean…Z</h3>
+<div id="frequencyBodyAccelerometer_mean___Z_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyAccelerometer_mean___Z_distribution-176-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyAccelerometer.mean…Z</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyAccelerometer_mean___Z_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="29%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="4%" />
+<col width="5%" />
+<col width="4%" />
+<col width="9%" />
+<col width="8%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyAccelerometer.mean…Z</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.72</td>
+<td align="left">0.28</td>
+<td align="right">-0.6297388</td>
+<td align="right">0.3556469</td>
+<td align="left">▇▂▅▁▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyAccelerometerJerk_mean___X" class="section level3 tabset">
+<h3>frequencyBodyAccelerometerJerk.mean…X</h3>
+<div id="frequencyBodyAccelerometerJerk_mean___X_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyAccelerometerJerk_mean___X_distribution-183-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyAccelerometerJerk.mean…X</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyAccelerometerJerk_mean___X_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="31%" />
+<col width="7%" />
+<col width="7%" />
+<col width="11%" />
+<col width="4%" />
+<col width="5%" />
+<col width="3%" />
+<col width="8%" />
+<col width="7%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyAccelerometerJerk.mean…X</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.81</td>
+<td align="left">0.47</td>
+<td align="right">-0.6139282</td>
+<td align="right">0.3982896</td>
+<td align="left">▇▂▃▂▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyAccelerometerJerk_mean___Y" class="section level3 tabset">
+<h3>frequencyBodyAccelerometerJerk.mean…Y</h3>
+<div id="frequencyBodyAccelerometerJerk_mean___Y_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyAccelerometerJerk_mean___Y_distribution-190-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyAccelerometerJerk.mean…Y</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyAccelerometerJerk_mean___Y_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="31%" />
+<col width="7%" />
+<col width="7%" />
+<col width="11%" />
+<col width="4%" />
+<col width="5%" />
+<col width="3%" />
+<col width="8%" />
+<col width="7%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyAccelerometerJerk.mean…Y</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.78</td>
+<td align="left">0.28</td>
+<td align="right">-0.5881631</td>
+<td align="right">0.4077491</td>
+<td align="left">▇▁▃▃▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyAccelerometerJerk_mean___Z" class="section level3 tabset">
+<h3>frequencyBodyAccelerometerJerk.mean…Z</h3>
+<div id="frequencyBodyAccelerometerJerk_mean___Z_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyAccelerometerJerk_mean___Z_distribution-197-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyAccelerometerJerk.mean…Z</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyAccelerometerJerk_mean___Z_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="31%" />
+<col width="7%" />
+<col width="7%" />
+<col width="11%" />
+<col width="4%" />
+<col width="5%" />
+<col width="3%" />
+<col width="8%" />
+<col width="7%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyAccelerometerJerk.mean…Z</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.87</td>
+<td align="left">0.16</td>
+<td align="right">-0.7143585</td>
+<td align="right">0.2970225</td>
+<td align="left">▇▂▃▁▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyGyroscope_mean___X" class="section level3 tabset">
+<h3>frequencyBodyGyroscope.mean…X</h3>
+<div id="frequencyBodyGyroscope_mean___X_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyGyroscope_mean___X_distribution-204-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyGyroscope.mean…X</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyGyroscope_mean___X_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="27%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="4%" />
+<col width="9%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyGyroscope.mean…X</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.73</td>
+<td align="left">0.47</td>
+<td align="right">-0.6367396</td>
+<td align="right">0.3467628</td>
+<td align="left">▇▂▅▁▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyGyroscope_mean___Y" class="section level3 tabset">
+<h3>frequencyBodyGyroscope.mean…Y</h3>
+<div id="frequencyBodyGyroscope_mean___Y_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyGyroscope_mean___Y_distribution-211-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyGyroscope.mean…Y</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyGyroscope_mean___Y_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="27%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="4%" />
+<col width="9%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyGyroscope.mean…Y</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.81</td>
+<td align="left">0.33</td>
+<td align="right">-0.6766868</td>
+<td align="right">0.3319182</td>
+<td align="left">▇▃▃▁▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyGyroscope_mean___Z" class="section level3 tabset">
+<h3>frequencyBodyGyroscope.mean…Z</h3>
+<div id="frequencyBodyGyroscope_mean___Z_distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyGyroscope_mean___Z_distribution-218-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyGyroscope.mean…Z</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyGyroscope_mean___Z_summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="27%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="5%" />
+<col width="5%" />
+<col width="4%" />
+<col width="9%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyGyroscope.mean…Z</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.79</td>
+<td align="left">0.49</td>
+<td align="right">-0.6043912</td>
+<td align="right">0.3842603</td>
+<td align="left">▇▂▅▁▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyAccelerometerMagnitude_mean__" class="section level3 tabset">
+<h3>frequencyBodyAccelerometerMagnitude.mean..</h3>
+<div id="frequencyBodyAccelerometerMagnitude_mean___distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyAccelerometerMagnitude_mean___distribution-225-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyAccelerometerMagnitude.mean..</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyAccelerometerMagnitude_mean___summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="7%" />
+<col width="7%" />
+<col width="10%" />
+<col width="4%" />
+<col width="5%" />
+<col width="3%" />
+<col width="8%" />
+<col width="7%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyAccelerometerMagnitude.mean..</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.67</td>
+<td align="left">0.59</td>
+<td align="right">-0.5365167</td>
+<td align="right">0.4516451</td>
+<td align="left">▇▂▃▂▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyAccelerometerJerkMagnitude_mean__" class="section level3 tabset">
+<h3>frequencyBodyAccelerometerJerkMagnitude.mean..</h3>
+<div id="frequencyBodyAccelerometerJerkMagnitude_mean___distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyAccelerometerJerkMagnitude_mean___distribution-232-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyAccelerometerJerkMagnitude.mean..</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyAccelerometerJerkMagnitude_mean___summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="35%" />
+<col width="7%" />
+<col width="7%" />
+<col width="10%" />
+<col width="4%" />
+<col width="5%" />
+<col width="3%" />
+<col width="8%" />
+<col width="7%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyAccelerometerJerkMagnitude.mean..</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.79</td>
+<td align="left">0.54</td>
+<td align="right">-0.5756175</td>
+<td align="right">0.4312321</td>
+<td align="left">▇▂▃▂▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyGyroscopeMagnitude_mean__" class="section level3 tabset">
+<h3>frequencyBodyGyroscopeMagnitude.mean..</h3>
+<div id="frequencyBodyGyroscopeMagnitude_mean___distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyGyroscopeMagnitude_mean___distribution-239-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyGyroscopeMagnitude.mean..</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyGyroscopeMagnitude_mean___summary" class="section level4">
+<h4>Summary statistics</h4>
+<table>
+<colgroup>
+<col width="31%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="4%" />
+<col width="5%" />
+<col width="3%" />
+<col width="8%" />
+<col width="8%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyGyroscopeMagnitude.mean..</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-0.99</td>
+<td align="left">-0.77</td>
+<td align="left">0.2</td>
+<td align="right">-0.6670991</td>
+<td align="right">0.3181183</td>
+<td align="left">▇▂▃▁▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="frequencyBodyGyroscopeJerkMagnitude_mean__" class="section level3 tabset">
+<h3>frequencyBodyGyroscopeJerkMagnitude.mean..</h3>
+<div id="frequencyBodyGyroscopeJerkMagnitude_mean___distribution" class="section level4">
+<h4>Distribution</h4>
+<div class="figure">
+<img src="CODEBOOK_files/figure-html/cb_codebook_data_frequencyBodyGyroscopeJerkMagnitude_mean___distribution-246-1.png" alt="" />
+<p class="caption">Distribution of values for frequencyBodyGyroscopeJerkMagnitude.mean..</p>
+</div>
+<p>0 missing values.</p>
+</div>
+<div id="frequencyBodyGyroscopeJerkMagnitude_mean___summary" class="section level4">
+<h4>Summary statistics</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="34%" />
+<col width="7%" />
+<col width="7%" />
+<col width="11%" />
+<col width="3%" />
+<col width="5%" />
+<col width="3%" />
+<col width="8%" />
+<col width="7%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">data_type</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">min</th>
+<th align="left">median</th>
+<th align="left">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="left">hist</th>
+<th align="left">label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frequencyBodyGyroscopeJerkMagnitude.mean..</td>
+<td align="left">numeric</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">-1</td>
+<td align="left">-0.88</td>
+<td align="left">0.15</td>
+<td align="right">-0.7563853</td>
+<td align="right">0.2628722</td>
+<td align="left">▇▅▂▁▁</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="missingness-report" class="section level2">
+<h2>Missingness report</h2>
+</div>
+<div id="codebook-table" class="section level2">
+<h2>Codebook table</h2>
+<div id="htmlwidget-42d4111308e2786542ed" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-42d4111308e2786542ed">{"x":{"filter":"top","filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"-0.756385271117364\" data-max=\"15.5\" data-scale=\"15\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0.005771183378251\" data-max=\"8.67958498608812\" data-scale=\"15\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"data":[["<a href=\"#subject\">subject<\/a>","<a href=\"#activity\">activity<\/a>","<a href=\"#timeBodyAccelerometer_mean___X\">timeBodyAccelerometer.mean...X<\/a>","<a href=\"#timeBodyAccelerometer_mean___Y\">timeBodyAccelerometer.mean...Y<\/a>","<a href=\"#timeBodyAccelerometer_mean___Z\">timeBodyAccelerometer.mean...Z<\/a>","<a href=\"#timeGravityAccelerometer_mean___X\">timeGravityAccelerometer.mean...X<\/a>","<a href=\"#timeGravityAccelerometer_mean___Y\">timeGravityAccelerometer.mean...Y<\/a>","<a href=\"#timeGravityAccelerometer_mean___Z\">timeGravityAccelerometer.mean...Z<\/a>","<a href=\"#timeBodyAccelerometerJerk_mean___X\">timeBodyAccelerometerJerk.mean...X<\/a>","<a href=\"#timeBodyAccelerometerJerk_mean___Y\">timeBodyAccelerometerJerk.mean...Y<\/a>","<a href=\"#timeBodyAccelerometerJerk_mean___Z\">timeBodyAccelerometerJerk.mean...Z<\/a>","<a href=\"#timeBodyGyroscope_mean___X\">timeBodyGyroscope.mean...X<\/a>","<a href=\"#timeBodyGyroscope_mean___Y\">timeBodyGyroscope.mean...Y<\/a>","<a href=\"#timeBodyGyroscope_mean___Z\">timeBodyGyroscope.mean...Z<\/a>","<a href=\"#timeBodyGyroscopeJerk_mean___X\">timeBodyGyroscopeJerk.mean...X<\/a>","<a href=\"#timeBodyGyroscopeJerk_mean___Y\">timeBodyGyroscopeJerk.mean...Y<\/a>","<a href=\"#timeBodyGyroscopeJerk_mean___Z\">timeBodyGyroscopeJerk.mean...Z<\/a>","<a href=\"#timeBodyAccelerometerMagnitude_mean__\">timeBodyAccelerometerMagnitude.mean..<\/a>","<a href=\"#timeGravityAccelerometerMagnitude_mean__\">timeGravityAccelerometerMagnitude.mean..<\/a>","<a href=\"#timeBodyAccelerometerJerkMagnitude_mean__\">timeBodyAccelerometerJerkMagnitude.mean..<\/a>","<a href=\"#timeBodyGyroscopeMagnitude_mean__\">timeBodyGyroscopeMagnitude.mean..<\/a>","<a href=\"#timeBodyGyroscopeJerkMagnitude_mean__\">timeBodyGyroscopeJerkMagnitude.mean..<\/a>","<a href=\"#frequencyBodyAccelerometer_mean___X\">frequencyBodyAccelerometer.mean...X<\/a>","<a href=\"#frequencyBodyAccelerometer_mean___Y\">frequencyBodyAccelerometer.mean...Y<\/a>","<a href=\"#frequencyBodyAccelerometer_mean___Z\">frequencyBodyAccelerometer.mean...Z<\/a>","<a href=\"#frequencyBodyAccelerometerJerk_mean___X\">frequencyBodyAccelerometerJerk.mean...X<\/a>","<a href=\"#frequencyBodyAccelerometerJerk_mean___Y\">frequencyBodyAccelerometerJerk.mean...Y<\/a>","<a href=\"#frequencyBodyAccelerometerJerk_mean___Z\">frequencyBodyAccelerometerJerk.mean...Z<\/a>","<a href=\"#frequencyBodyGyroscope_mean___X\">frequencyBodyGyroscope.mean...X<\/a>","<a href=\"#frequencyBodyGyroscope_mean___Y\">frequencyBodyGyroscope.mean...Y<\/a>","<a href=\"#frequencyBodyGyroscope_mean___Z\">frequencyBodyGyroscope.mean...Z<\/a>","<a href=\"#frequencyBodyAccelerometerMagnitude_mean__\">frequencyBodyAccelerometerMagnitude.mean..<\/a>","<a href=\"#frequencyBodyAccelerometerJerkMagnitude_mean__\">frequencyBodyAccelerometerJerkMagnitude.mean..<\/a>","<a href=\"#frequencyBodyGyroscopeMagnitude_mean__\">frequencyBodyGyroscopeMagnitude.mean..<\/a>","<a href=\"#frequencyBodyGyroscopeJerkMagnitude_mean__\">frequencyBodyGyroscopeJerkMagnitude.mean..<\/a>"],["numeric","character","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric"],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[null,6,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[" 1.000","6"," 0.222","-0.041","-0.153","-0.680","-0.480","-0.495"," 0.043","-0.039","-0.067","-0.206","-0.204","-0.072","-0.157","-0.077","-0.092","-0.986","-0.986","-0.993","-0.981","-0.997","-0.995","-0.989","-0.989","-0.995","-0.989","-0.992","-0.993","-0.994","-0.986","-0.987","-0.994","-0.987","-0.998"],["15.5000",null," 0.2770","-0.0173","-0.1082"," 0.9208","-0.1278"," 0.0238"," 0.0764"," 0.0095","-0.0039","-0.0287","-0.0732"," 0.0851","-0.0987","-0.0411","-0.0534","-0.4829","-0.4829","-0.8168","-0.6551","-0.8648","-0.7691","-0.5950","-0.7236","-0.8126","-0.7817","-0.8707","-0.7300","-0.8141","-0.7909","-0.6703","-0.7940","-0.7657","-0.8779"],["30.0000","18"," 0.3015","-0.0013","-0.0754"," 0.9745"," 0.9566"," 0.9579"," 0.1302"," 0.0568"," 0.0381"," 0.1927"," 0.0275"," 0.1791","-0.0221","-0.0132","-0.0069"," 0.6446"," 0.6446"," 0.4345"," 0.4180"," 0.0876"," 0.5370"," 0.5242"," 0.2807"," 0.4743"," 0.2767"," 0.1578"," 0.4750"," 0.3288"," 0.4924"," 0.5866"," 0.5384"," 0.2040"," 0.1466"],[15.5,null,0.274302742245795,-0.0178755238674415,-0.109163815804519,0.697477505882702,-0.0162128361521394,0.0741278709325255,0.0794735599203562,0.00756520996888408,-0.00495340328183431,-0.0324371599031218,-0.0742595723452297,0.0874446468695526,-0.0960567959204382,-0.0426927819752453,-0.0548018825799509,-0.49728966685894,-0.49728966685894,-0.607929591545179,-0.565163077212988,-0.736369300428253,-0.575799983503946,-0.488732713013952,-0.62973875362598,-0.613928222283428,-0.588163069360073,-0.714358487490646,-0.636739605053057,-0.676686800745998,-0.604391244378742,-0.536516692548498,-0.575617493234432,-0.667099099613148,-0.756385271117364],[8.67958498608812,null,0.0121645667261557,0.00577118337825103,0.00958197470743408,0.487253358751969,0.345237554949004,0.288791900242227,0.0125880144369714,0.0135764489416247,0.0134621000957523,0.0540517976345597,0.0355414935051444,0.0362124915271941,0.023345835181633,0.00953201532078773,0.0123469698187147,0.47288337430212,0.47288337430212,0.39652717966196,0.397733844241663,0.276754055143987,0.430021370678231,0.480649614549458,0.355646905901136,0.398289563461448,0.407749074960933,0.297022477874167,0.346762763299011,0.331918153270889,0.384260260997847,0.451645115357635,0.431232111929455,0.31811825925725,0.262872210766418],[null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["▇▇▇▇▇",null,"▁▁▂▇▂","▁▂▇▇▁","▁▁▇▅▁","▁▁▁▁▇","▇▇▂▁▂","▂▇▃▁▁","▁▇▃▂▁","▁▃▇▂▁","▁▁▇▇▁","▁▂▇▁▁","▁▁▇▃▁","▁▁▃▇▂","▁▂▇▁▁","▁▂▇▃▁","▁▅▇▁▁","▇▁▅▃▁","▇▁▅▃▁","▇▂▅▂▁","▇▁▅▂▁","▇▃▃▁▁","▇▁▃▂▁","▇▁▃▃▁","▇▂▅▁▁","▇▂▃▂▁","▇▁▃▃▁","▇▂▃▁▁","▇▂▅▁▁","▇▃▃▁▁","▇▂▅▁▁","▇▂▃▂▁","▇▂▃▂▁","▇▂▃▁▁","▇▅▂▁▁"],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>name<\/th>\n      <th>data_type<\/th>\n      <th>n_missing<\/th>\n      <th>complete_rate<\/th>\n      <th>n_unique<\/th>\n      <th>empty<\/th>\n      <th>min<\/th>\n      <th>median<\/th>\n      <th>max<\/th>\n      <th>mean<\/th>\n      <th>sd<\/th>\n      <th>whitespace<\/th>\n      <th>hist<\/th>\n      <th>label<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["copy","csv","excel","pdf","print"],"pageLength":200,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,9,10,11]}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true,"lengthMenu":[10,25,50,100,200]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/ld+json">
+{
+  "name": "codebook_data",
+  "datePublished": "2021-05-18",
+  "description": "The dataset has N=180 rows and 35 columns.\n180 rows have no missing values on any column.\n\n\n## Table of variables\nThis table contains variable names, labels, and number of missing values.\nSee the complete codebook for more.\n\n|name                                           |label | n_missing|\n|:----------------------------------------------|:-----|---------:|\n|subject                                        |NA    |         0|\n|activity                                       |NA    |         0|\n|timeBodyAccelerometer.mean...X                 |NA    |         0|\n|timeBodyAccelerometer.mean...Y                 |NA    |         0|\n|timeBodyAccelerometer.mean...Z                 |NA    |         0|\n|timeGravityAccelerometer.mean...X              |NA    |         0|\n|timeGravityAccelerometer.mean...Y              |NA    |         0|\n|timeGravityAccelerometer.mean...Z              |NA    |         0|\n|timeBodyAccelerometerJerk.mean...X             |NA    |         0|\n|timeBodyAccelerometerJerk.mean...Y             |NA    |         0|\n|timeBodyAccelerometerJerk.mean...Z             |NA    |         0|\n|timeBodyGyroscope.mean...X                     |NA    |         0|\n|timeBodyGyroscope.mean...Y                     |NA    |         0|\n|timeBodyGyroscope.mean...Z                     |NA    |         0|\n|timeBodyGyroscopeJerk.mean...X                 |NA    |         0|\n|timeBodyGyroscopeJerk.mean...Y                 |NA    |         0|\n|timeBodyGyroscopeJerk.mean...Z                 |NA    |         0|\n|timeBodyAccelerometerMagnitude.mean..          |NA    |         0|\n|timeGravityAccelerometerMagnitude.mean..       |NA    |         0|\n|timeBodyAccelerometerJerkMagnitude.mean..      |NA    |         0|\n|timeBodyGyroscopeMagnitude.mean..              |NA    |         0|\n|timeBodyGyroscopeJerkMagnitude.mean..          |NA    |         0|\n|frequencyBodyAccelerometer.mean...X            |NA    |         0|\n|frequencyBodyAccelerometer.mean...Y            |NA    |         0|\n|frequencyBodyAccelerometer.mean...Z            |NA    |         0|\n|frequencyBodyAccelerometerJerk.mean...X        |NA    |         0|\n|frequencyBodyAccelerometerJerk.mean...Y        |NA    |         0|\n|frequencyBodyAccelerometerJerk.mean...Z        |NA    |         0|\n|frequencyBodyGyroscope.mean...X                |NA    |         0|\n|frequencyBodyGyroscope.mean...Y                |NA    |         0|\n|frequencyBodyGyroscope.mean...Z                |NA    |         0|\n|frequencyBodyAccelerometerMagnitude.mean..     |NA    |         0|\n|frequencyBodyAccelerometerJerkMagnitude.mean.. |NA    |         0|\n|frequencyBodyGyroscopeMagnitude.mean..         |NA    |         0|\n|frequencyBodyGyroscopeJerkMagnitude.mean..     |NA    |         0|\n\n### Note\nThis dataset was automatically described using the [codebook R package](https://rubenarslan.github.io/codebook/) (version 0.9.2).",
+  "keywords": ["subject", "activity", "timeBodyAccelerometer.mean...X", "timeBodyAccelerometer.mean...Y", "timeBodyAccelerometer.mean...Z", "timeGravityAccelerometer.mean...X", "timeGravityAccelerometer.mean...Y", "timeGravityAccelerometer.mean...Z", "timeBodyAccelerometerJerk.mean...X", "timeBodyAccelerometerJerk.mean...Y", "timeBodyAccelerometerJerk.mean...Z", "timeBodyGyroscope.mean...X", "timeBodyGyroscope.mean...Y", "timeBodyGyroscope.mean...Z", "timeBodyGyroscopeJerk.mean...X", "timeBodyGyroscopeJerk.mean...Y", "timeBodyGyroscopeJerk.mean...Z", "timeBodyAccelerometerMagnitude.mean..", "timeGravityAccelerometerMagnitude.mean..", "timeBodyAccelerometerJerkMagnitude.mean..", "timeBodyGyroscopeMagnitude.mean..", "timeBodyGyroscopeJerkMagnitude.mean..", "frequencyBodyAccelerometer.mean...X", "frequencyBodyAccelerometer.mean...Y", "frequencyBodyAccelerometer.mean...Z", "frequencyBodyAccelerometerJerk.mean...X", "frequencyBodyAccelerometerJerk.mean...Y", "frequencyBodyAccelerometerJerk.mean...Z", "frequencyBodyGyroscope.mean...X", "frequencyBodyGyroscope.mean...Y", "frequencyBodyGyroscope.mean...Z", "frequencyBodyAccelerometerMagnitude.mean..", "frequencyBodyAccelerometerJerkMagnitude.mean..", "frequencyBodyGyroscopeMagnitude.mean..", "frequencyBodyGyroscopeJerkMagnitude.mean.."],
+  "@context": "http://schema.org/",
+  "@type": "Dataset",
+  "variableMeasured": [
+    {
+      "name": "subject",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "activity",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyAccelerometer.mean...X",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyAccelerometer.mean...Y",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyAccelerometer.mean...Z",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeGravityAccelerometer.mean...X",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeGravityAccelerometer.mean...Y",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeGravityAccelerometer.mean...Z",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyAccelerometerJerk.mean...X",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyAccelerometerJerk.mean...Y",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyAccelerometerJerk.mean...Z",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyGyroscope.mean...X",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyGyroscope.mean...Y",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyGyroscope.mean...Z",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyGyroscopeJerk.mean...X",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyGyroscopeJerk.mean...Y",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyGyroscopeJerk.mean...Z",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyAccelerometerMagnitude.mean..",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeGravityAccelerometerMagnitude.mean..",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyAccelerometerJerkMagnitude.mean..",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyGyroscopeMagnitude.mean..",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "timeBodyGyroscopeJerkMagnitude.mean..",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyAccelerometer.mean...X",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyAccelerometer.mean...Y",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyAccelerometer.mean...Z",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyAccelerometerJerk.mean...X",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyAccelerometerJerk.mean...Y",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyAccelerometerJerk.mean...Z",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyGyroscope.mean...X",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyGyroscope.mean...Y",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyGyroscope.mean...Z",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyAccelerometerMagnitude.mean..",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyAccelerometerJerkMagnitude.mean..",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyGyroscopeMagnitude.mean..",
+      "@type": "propertyValue"
+    },
+    {
+      "name": "frequencyBodyGyroscopeJerkMagnitude.mean..",
+      "@type": "propertyValue"
+    }
+  ]
+}
+</script>
+<details>
+<p><summary>JSON-LD metadata</summary> The following JSON-LD can be found by search engines, if you share this codebook publicly on the web.</p>
+<pre class="json"><code>{
+  &quot;name&quot;: &quot;codebook_data&quot;,
+  &quot;datePublished&quot;: &quot;2021-05-18&quot;,
+  &quot;description&quot;: &quot;The dataset has N=180 rows and 35 columns.\n180 rows have no missing values on any column.\n\n\n## Table of variables\nThis table contains variable names, labels, and number of missing values.\nSee the complete codebook for more.\n\n|name                                           |label | n_missing|\n|:----------------------------------------------|:-----|---------:|\n|subject                                        |NA    |         0|\n|activity                                       |NA    |         0|\n|timeBodyAccelerometer.mean...X                 |NA    |         0|\n|timeBodyAccelerometer.mean...Y                 |NA    |         0|\n|timeBodyAccelerometer.mean...Z                 |NA    |         0|\n|timeGravityAccelerometer.mean...X              |NA    |         0|\n|timeGravityAccelerometer.mean...Y              |NA    |         0|\n|timeGravityAccelerometer.mean...Z              |NA    |         0|\n|timeBodyAccelerometerJerk.mean...X             |NA    |         0|\n|timeBodyAccelerometerJerk.mean...Y             |NA    |         0|\n|timeBodyAccelerometerJerk.mean...Z             |NA    |         0|\n|timeBodyGyroscope.mean...X                     |NA    |         0|\n|timeBodyGyroscope.mean...Y                     |NA    |         0|\n|timeBodyGyroscope.mean...Z                     |NA    |         0|\n|timeBodyGyroscopeJerk.mean...X                 |NA    |         0|\n|timeBodyGyroscopeJerk.mean...Y                 |NA    |         0|\n|timeBodyGyroscopeJerk.mean...Z                 |NA    |         0|\n|timeBodyAccelerometerMagnitude.mean..          |NA    |         0|\n|timeGravityAccelerometerMagnitude.mean..       |NA    |         0|\n|timeBodyAccelerometerJerkMagnitude.mean..      |NA    |         0|\n|timeBodyGyroscopeMagnitude.mean..              |NA    |         0|\n|timeBodyGyroscopeJerkMagnitude.mean..          |NA    |         0|\n|frequencyBodyAccelerometer.mean...X            |NA    |         0|\n|frequencyBodyAccelerometer.mean...Y            |NA    |         0|\n|frequencyBodyAccelerometer.mean...Z            |NA    |         0|\n|frequencyBodyAccelerometerJerk.mean...X        |NA    |         0|\n|frequencyBodyAccelerometerJerk.mean...Y        |NA    |         0|\n|frequencyBodyAccelerometerJerk.mean...Z        |NA    |         0|\n|frequencyBodyGyroscope.mean...X                |NA    |         0|\n|frequencyBodyGyroscope.mean...Y                |NA    |         0|\n|frequencyBodyGyroscope.mean...Z                |NA    |         0|\n|frequencyBodyAccelerometerMagnitude.mean..     |NA    |         0|\n|frequencyBodyAccelerometerJerkMagnitude.mean.. |NA    |         0|\n|frequencyBodyGyroscopeMagnitude.mean..         |NA    |         0|\n|frequencyBodyGyroscopeJerkMagnitude.mean..     |NA    |         0|\n\n### Note\nThis dataset was automatically described using the [codebook R package](https://rubenarslan.github.io/codebook/) (version 0.9.2).&quot;,
+  &quot;keywords&quot;: [&quot;subject&quot;, &quot;activity&quot;, &quot;timeBodyAccelerometer.mean...X&quot;, &quot;timeBodyAccelerometer.mean...Y&quot;, &quot;timeBodyAccelerometer.mean...Z&quot;, &quot;timeGravityAccelerometer.mean...X&quot;, &quot;timeGravityAccelerometer.mean...Y&quot;, &quot;timeGravityAccelerometer.mean...Z&quot;, &quot;timeBodyAccelerometerJerk.mean...X&quot;, &quot;timeBodyAccelerometerJerk.mean...Y&quot;, &quot;timeBodyAccelerometerJerk.mean...Z&quot;, &quot;timeBodyGyroscope.mean...X&quot;, &quot;timeBodyGyroscope.mean...Y&quot;, &quot;timeBodyGyroscope.mean...Z&quot;, &quot;timeBodyGyroscopeJerk.mean...X&quot;, &quot;timeBodyGyroscopeJerk.mean...Y&quot;, &quot;timeBodyGyroscopeJerk.mean...Z&quot;, &quot;timeBodyAccelerometerMagnitude.mean..&quot;, &quot;timeGravityAccelerometerMagnitude.mean..&quot;, &quot;timeBodyAccelerometerJerkMagnitude.mean..&quot;, &quot;timeBodyGyroscopeMagnitude.mean..&quot;, &quot;timeBodyGyroscopeJerkMagnitude.mean..&quot;, &quot;frequencyBodyAccelerometer.mean...X&quot;, &quot;frequencyBodyAccelerometer.mean...Y&quot;, &quot;frequencyBodyAccelerometer.mean...Z&quot;, &quot;frequencyBodyAccelerometerJerk.mean...X&quot;, &quot;frequencyBodyAccelerometerJerk.mean...Y&quot;, &quot;frequencyBodyAccelerometerJerk.mean...Z&quot;, &quot;frequencyBodyGyroscope.mean...X&quot;, &quot;frequencyBodyGyroscope.mean...Y&quot;, &quot;frequencyBodyGyroscope.mean...Z&quot;, &quot;frequencyBodyAccelerometerMagnitude.mean..&quot;, &quot;frequencyBodyAccelerometerJerkMagnitude.mean..&quot;, &quot;frequencyBodyGyroscopeMagnitude.mean..&quot;, &quot;frequencyBodyGyroscopeJerkMagnitude.mean..&quot;],
+  &quot;@context&quot;: &quot;http://schema.org/&quot;,
+  &quot;@type&quot;: &quot;Dataset&quot;,
+  &quot;variableMeasured&quot;: [
+    {
+      &quot;name&quot;: &quot;subject&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;activity&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyAccelerometer.mean...X&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyAccelerometer.mean...Y&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyAccelerometer.mean...Z&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeGravityAccelerometer.mean...X&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeGravityAccelerometer.mean...Y&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeGravityAccelerometer.mean...Z&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyAccelerometerJerk.mean...X&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyAccelerometerJerk.mean...Y&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyAccelerometerJerk.mean...Z&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyGyroscope.mean...X&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyGyroscope.mean...Y&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyGyroscope.mean...Z&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyGyroscopeJerk.mean...X&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyGyroscopeJerk.mean...Y&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyGyroscopeJerk.mean...Z&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyAccelerometerMagnitude.mean..&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeGravityAccelerometerMagnitude.mean..&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyAccelerometerJerkMagnitude.mean..&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyGyroscopeMagnitude.mean..&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;timeBodyGyroscopeJerkMagnitude.mean..&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyAccelerometer.mean...X&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyAccelerometer.mean...Y&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyAccelerometer.mean...Z&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyAccelerometerJerk.mean...X&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyAccelerometerJerk.mean...Y&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyAccelerometerJerk.mean...Z&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyGyroscope.mean...X&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyGyroscope.mean...Y&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyGyroscope.mean...Z&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyAccelerometerMagnitude.mean..&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyAccelerometerJerkMagnitude.mean..&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyGyroscopeMagnitude.mean..&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;frequencyBodyGyroscopeJerkMagnitude.mean..&quot;,
+      &quot;@type&quot;: &quot;propertyValue&quot;
+    }
+  ]
+}`</code></pre>
+</details>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
